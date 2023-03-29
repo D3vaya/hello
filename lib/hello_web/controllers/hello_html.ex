@@ -8,4 +8,12 @@ defmodule HelloWeb.HelloHTML do
   #   Hello!
   #   """
   # end
+
+  attr :messenger, :string, default: nil
+
+  def greet(assigns) do
+    ~H"""
+    <h2>Hello World, from <%= @messenger %>!</h2>
+    """
+  end
 end
